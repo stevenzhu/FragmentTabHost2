@@ -195,10 +195,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.sendTagLayout:// 添加按钮
-                openPanelView();
+                if (mPanelView.getVisibility() == View.GONE) {
+                    openPanelView();
+                }
                 break;
             case R.id.close:// 关闭按钮
-                closePanelView();
+                if (mPanelView.getVisibility() == View.VISIBLE) {
+                    closePanelView();
+                }
                 break;
         }
     }

@@ -19,14 +19,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginBottom="85dp"
+            android:layout_marginBottom="80dp"
             android:layout_marginLeft="35dp"
+            android:layout_marginTop="@dimen/sendIconMarginSize"
             android:gravity="center"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_lbs"/>
 
             <TextView
@@ -48,8 +49,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_review"/>
 
             <TextView
@@ -72,8 +73,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_more"/>
 
             <TextView
@@ -96,8 +97,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_idea"/>
 
             <TextView
@@ -119,8 +120,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_photo"/>
 
             <TextView
@@ -142,8 +143,8 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="@dimen/sendIconSize"
+                android:layout_height="@dimen/sendIconSize"
                 android:src="@drawable/tabbar_compose_weibo"/>
 
             <TextView
@@ -169,13 +170,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#fdfcfb"
-        android:gravity="center">
+        android:background="#ffffff"
+        android:gravity="center"
+        android:clickable="true"
+        >
 
         <ImageView
             android:id="@+id/close"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80px"
+            android:layout_height="80px"
             android:src="@drawable/tabbar_compose_background_icon_close"/>
     </LinearLayout>
 </LinearLayout>
