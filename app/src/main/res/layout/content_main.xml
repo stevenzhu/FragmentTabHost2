@@ -12,63 +12,84 @@
         android:id="@android:id/tabhost"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0" />
+                <FrameLayout
+                    android:id="@android:id/tabcontent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0" />
 
-            <com.app.gaolonglong.fragmenttabhost.CustomViewPager
-                android:id="@+id/view_pager"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
-             <LinearLayout
-                 android:layout_width="match_parent"
-                 android:layout_height="?attr/actionBarSize"
-                 android:background="#00000000"
-                 android:orientation="horizontal">
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="?attr/actionBarSize"
-                     android:layout_weight="2"
-                     android:background="#00000000"></LinearLayout>
-                 <LinearLayout
-                     android:id="@+id/sendTagLayout"
-                     android:layout_width="0dp"
-                     android:layout_height="?attr/actionBarSize"
-                     android:layout_weight="1"
-                     android:background="#ffffff"
-                     android:orientation="horizontal"
-                     android:clickable="true"
-                     android:gravity="center">
-                     <ImageView
-                         android:id="@+id/image"
-                         android:src="@mipmap/ic_launcher"
-                         android:layout_width="50dp"
-                         android:layout_height="50dp" />
-                 </LinearLayout>
-                 <LinearLayout
-                     android:layout_width="0dp"
-                     android:layout_height="?attr/actionBarSize"
-                     android:layout_weight="2"
-                     android:background="#00000000"></LinearLayout>
-             </LinearLayout>
-            </FrameLayout>
-        </LinearLayout>
+                <com.app.gaolonglong.fragmenttabhost.CustomViewPager
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#cccccc"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize">
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="#00000000"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="2"
+                            android:background="#00000000"></LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sendTagLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="1"
+                            android:background="#ffffff"
+                            android:clickable="true"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:paddingBottom="6dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="6dp">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/tabbar_compose_bg_add_selector"
+                                android:gravity="center"
+                                >
+                                <ImageView
+                                    android:layout_width="80px"
+                                    android:layout_height="80px"
+                                    android:src="@drawable/tabbar_compose_icon_add_selector"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="?attr/actionBarSize"
+                            android:layout_weight="2"
+                            android:background="#00000000"></LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <include layout="@layout/view_add"/>
+        </FrameLayout>
+
 
     </android.support.v4.app.FragmentTabHost>
 
